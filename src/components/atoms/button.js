@@ -60,16 +60,10 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-  /** Optionnal sizes */
- size: PropTypes.oneOf(['small', 'medium', 'large']),
- /** Children as ONE element */
- children: PropTypes.element.isRequired,
- /** Callback when clicked */
- onClick: PropTypes.func.isRequired,
- /** Optionnal testid */
- testid: PropTypes.string,
- /** Disabled state */
- disabled: PropTypes.bool
+    type: PropTypes.oneOf(['primary', 'secondary', 'danger']),
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    children: PropTypes.element.isRequired,
+    onClick: PropTypes.func.isRequired
 };
 
 export default Button;

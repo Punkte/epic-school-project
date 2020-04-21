@@ -1,0 +1,41 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { Small, Medium, Large, Spacer} from './input.stories';
+import Input from '../../components/atoms/input';
+
+<Meta title="Atoms|Input" component={Input} />
+
+# Input
+
+This section describe all variant of Input component. You can play with 3 sizes: `small`, `medium` and `large`.
+
+<div style={{ display: 'flex', flexDirection: 'column' }}>
+    <Small />
+    <Spacer />
+    <Medium />
+    <Spacer />
+    <Large />
+</div>
+
+Now let's see in details !
+
+```javascript
+<Input size="large">Large Input</Input>
+```
+
+# Story Component
+
+<Story name="Small <Input /> story">
+    <Input size="small"/>
+</Story>
+
+# Preview Component
+
+<Preview>
+    <Story name="Small <Input /> preview">
+        <Input size="small"/>
+    </Story>
+</Preview>
+
+# Props
+
+<Props of={Input} />

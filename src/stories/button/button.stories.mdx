@@ -1,0 +1,39 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { Small, Medium, Large} from './button.stories';
+import Button from '../../components/atoms/button';
+
+<Meta title="Atoms|Button" component={Button} />
+
+# Button
+
+This section describe all variant of Label component. You can play with 3 sizes: `small`, `medium` and `large`.
+
+<div style={{ display: 'flex', flexDirection: 'column' }}>
+    <Small />
+    <Medium />
+    <Large />
+</div>
+
+Now let's see in details !
+
+```javascript
+<Button size="large">Large Button</Button>
+```
+
+# Story Component
+
+<Story name="Small <Label /> story">
+    <Button size="small">Small Button</Button>
+</Story>
+
+# Preview Component
+
+<Preview>
+    <Story name="Small <Button /> preview">
+        <Button size="small">Small Button</Button>
+    </Story>
+</Preview>
+
+# Props
+
+<Props of={Button} />

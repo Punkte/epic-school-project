@@ -1,0 +1,35 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { Small, Medium, Large} from './input-group.stories';
+import InputGroup from '../../components/molecules/input-group';
+
+<Meta title="Molecules|InputGroup" component={InputGroup} />
+
+# InputGroup
+
+This section describe all variant of InputGroup component. You can play with 3 sizes: `small`, `medium` and `large`.
+
+<InputGroup size="large" label="small label" />
+
+Now let's see in details !
+
+```javascript
+<InputGroup size="large" label="small label" />
+```
+
+# Story Component
+
+<Story name="Small <InputGroup /> story">
+    <InputGroup size="small" label="small label" />
+</Story>
+
+# Preview Component
+
+<Preview>
+    <Story name="Small <InputGroup /> preview">
+        <InputGroup size="small" label="small label" />
+    </Story>
+</Preview>
+
+# Props
+
+<Props of={InputGroup} />

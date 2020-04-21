@@ -1,13 +1,30 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-const Button = styled.button`
+const sizes = {
+    small:{
+        fontSize: '12px',
+        lineHeight: '16px',
+    },
+    medium: {
+        fontSize: '14px',
+        lineHeight: '18px',
+    },
+    large: {
+        fontSize: '16px',
+        lineHeight: '20px',
+    }
+}
+
+const StyledButton = styled.button`
     font-family: Roboto;
     font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
+    font-size:  ${props => sizes[props.size].fontSize};
+    line-height: ${props => sizes[props.size].lineHeight};
     color: #000;
-    width: 100px;
+    width: 100%;
     outline: none;
     transition: all ease .4s;
     padding: 16px;
@@ -27,5 +44,26 @@ const Button = styled.button`
         background-color: #E5E7EB;
     }
 `;
+
+const Button = ({size, children, onClick, testid, disabled}) => {
+    return(
+    <StyledButton size={size} data-testid={testid} onClick={onClick} disabled={disabled}>{children}</StyledButton>
+    )
+}
+
+/* Will show the right 'tag' within documentation */
+Button.displayName = 'Button';
+Button.defaultProps = {
+    size: 'medium',
+    testid: 'button',
+    disabled: false,
+};
+
+Button.propTypes = {
+    type: PropTypes.oneOf(['primary', 'secondary', 'danger']),
+    size: PropTypes.oneOf(['small', 'medium', 'large']),
+    children: PropTypes.element.isRequired,
+    onClick: PropTypes.func.isRequired
+};
 
 export default Button;

@@ -1,0 +1,42 @@
+import { Meta, Story, Preview, Code, Props } from '@storybook/addon-docs/blocks';
+import { Small, Medium, Large} from './title.stories';
+import {Spacer} from '../utils'
+import Title from '../../components/atoms/title';
+
+<Meta title="Atoms|Title" component={Title} />
+
+# Title
+
+This section describe all variant of Label component. You can play with 3 sizes: `small`, `medium` and `large`.
+
+<div style={{ display: 'flex', flexDirection: 'column' }}>
+    <Small />
+    <Spacer/>
+    <Medium />
+    <Spacer/>
+    <Large />
+</div>
+
+Now let's see in details !
+
+```javascript
+<Title size="large">Large Title</Title>
+```
+
+# Story Component
+
+<Story name="Small <Label /> story">
+    <Title size="small">Small Title</Title>
+</Story>
+
+# Preview Component
+
+<Preview>
+    <Story name="Small <Title /> preview">
+        <Title size="small">Small Title</Title>
+    </Story>
+</Preview>
+
+# Props
+
+<Props of={Title} />
